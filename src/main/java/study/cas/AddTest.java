@@ -1,4 +1,4 @@
-package cas;
+package study.cas;
 
 /**
  * @Author: aiJun
