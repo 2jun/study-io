@@ -29,8 +29,8 @@ import java.util.TimerTask;
 )
 public class EnableMonitorAutoConfiguration {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnableMonitorAutoConfiguration.class);
-    private static final long DELAY = 60000L;
-    private static final long PERIOD = 600000L;
+    private static final long DELAY = 60000L;//  执行任务之前的延迟（以毫秒为单位）。连续执行任务之间的时间（以毫秒为单位）。
+    private static final long PERIOD = 600000L;// 连续执行任务之间的时间（以毫秒为单位）
 
     public EnableMonitorAutoConfiguration() {
         LOGGER.info("####EnableMonitorAutoConfiguration init success####");
@@ -42,7 +42,7 @@ public class EnableMonitorAutoConfiguration {
             public void run() {
                 EnableMonitorAutoConfiguration.this.printJvm();
             }
-        }, 60000L, 600000L);
+        }, DELAY, PERIOD);
     }
 
     private void printJvm() {
