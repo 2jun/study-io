@@ -20,6 +20,11 @@ import java.util.TimerTask;
 
 /**
  * JVM监控
+ *     String[] value() default {};
+ *     String prefix() default "";
+ *     String[] name() default {};
+ *     String havingValue() default "";
+ *     boolean matchIfMissing() default false;
  */
 @Configuration
 @ConditionalOnProperty(
