@@ -19,12 +19,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * JVM监控
- *     String[] value() default {};
- *     String prefix() default "";
- *     String[] name() default {};
- *     String havingValue() default "";
- *     boolean matchIfMissing() default false;
+ JVM监控
+ String[] value() default {}; //数组，获取对应property名称的值，与name不可同时使用
+ String prefix() default "";//property名称的前缀，可有可无
+ String[] name() default {};//数组，property完整名称或部分名称（可与prefix组合使用，组成完整的property名称），与value不可同时使用
+ String havingValue() default "";//可与name组合使用，比较获取到的属性值与havingValue给定的值是否相同，相同才加载配置
+ boolean matchIfMissing() default false;//缺少该property时是否可以加载。如果为true，没有该property也会正常加载；反之报错
  */
 @Configuration
 @ConditionalOnProperty(
