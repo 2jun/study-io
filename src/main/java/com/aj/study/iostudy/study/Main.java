@@ -12,6 +12,9 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
+    }
+
+    private static void test01() {
         List<Person> lst = new ArrayList<>();
         lst.add(new Person("张1", 11));
         lst.add(new Person("张2", 12));
